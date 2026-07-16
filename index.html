@@ -454,6 +454,8 @@ a{color:inherit;text-decoration:none}ul{list-style:none}img{max-width:100%;displ
 .edu-content li{margin-bottom:8px}
 .edu-visual{background:linear-gradient(135deg,var(--offwhite),#e8f4fb);border-radius:20px;padding:40px;display:flex;align-items:center;justify-content:center;min-height:320px}
 .edu-visual img{height:220px;width:auto;object-fit:contain;filter:drop-shadow(0 12px 32px rgba(11,30,50,.18))}
+.edu-visual.photo{padding:0;background:none;min-height:360px;overflow:hidden;border-radius:20px;box-shadow:0 20px 50px rgba(11,30,50,.16)}
+.edu-visual.photo img{height:100%;width:100%;object-fit:cover;filter:none;border-radius:20px}
 .faq-sect{background:var(--navy);padding:80px 0}
 .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:48px}
 .faq-item{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);padding:24px}
@@ -535,7 +537,8 @@ html,body{overflow-x:hidden;width:100%}
   .faq-grid{grid-template-columns:1fr!important}
 }
 /* Edu section images don't overflow */
-.edu-visual img{max-width:100%;height:auto;max-height:220px}
+.edu-visual:not(.photo) img{max-width:100%;height:auto;max-height:220px}
+.edu-visual.photo{min-height:260px}
 /* Vial images in hero */
 .hero-vials img{max-height:260px;width:auto}
 /* Pricing box stays horizontal */
@@ -686,8 +689,8 @@ img{max-width:100%;height:auto}
     </div>
     <div class="hero-vials">
       <div class="vial-pair">
-        <img src="images/tirz-vial.svg" alt="Compounded Tirzepatide Vial — MedFit Health"/>
-        <img src="images/sema-vial.svg" alt="Compounded Semaglutide Vial — MedFit Health" style="height:240px;margin-bottom:20px"/>
+        <img src="images/tirz-vial.png" alt="Compounded Tirzepatide Vial — MedFit Health"/>
+        <img src="images/sema-vial.png" alt="Compounded Semaglutide Vial — MedFit Health" style="height:240px;margin-bottom:20px"/>
       </div>
     </div>
   </div>
@@ -710,6 +713,22 @@ img{max-width:100%;height:auto}
   </div>
 </section>
 
+<section class="edu-sect" style="background:#fff">
+  <div class="si">
+    <div class="edu-inner">
+      <div class="edu-visual photo">
+        <img src="images/woman-healthy-lifestyle-laptop.jpg" alt="MedFit Health patient managing her wellness routine alongside a normal workday"/>
+      </div>
+      <div class="edu-content">
+        <div class="lbl">Built Around Real Life</div>
+        <h2>Care that fits into your day — not around it</h2>
+        <p>No waiting rooms. No taking time off work. MedFit Health's telehealth model means a physician evaluation, an ongoing prescription, and check-ins that all happen around your schedule — not the other way around.</p>
+        <p>Your program is designed by a board-certified physician and adjusted over time based on your progress, so it keeps working with your routine instead of disrupting it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="hiw-home" id="how-it-works">
   <div class="si">
     <div class="lbl">Simple 4-Step Process</div>
@@ -719,6 +738,22 @@ img{max-width:100%;height:auto}
       <div class="hiw-step anim"><div class="hiw-num">2</div><h3>Physician Review</h3><p>A board-certified physician reviews your intake and determines if a GLP-1 program is clinically appropriate for you.</p></div>
       <div class="hiw-step anim"><div class="hiw-num">3</div><h3>Prescription Issued</h3><p>If you qualify, your prescription is sent to our licensed 503B pharmacy partner. No pharmacy trips — entirely online.</p></div>
       <div class="hiw-step anim"><div class="hiw-num">4</div><h3>Delivered to Your Door</h3><p>Your medication arrives within 5 business days in discreet packaging with all supplies included. Ongoing check-ins keep you on track.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="edu-sect" style="background:#fff">
+  <div class="si">
+    <div class="edu-inner">
+      <div class="edu-content">
+        <div class="lbl">Physician-Led Care</div>
+        <h2>A board-certified physician reviews every case</h2>
+        <p>Every intake is reviewed by a licensed, board-certified physician — not an algorithm. Your physician evaluates your health history, determines whether a GLP-1 or peptide program is clinically appropriate, and stays involved throughout your treatment.</p>
+        <p>Dosing adjustments, check-ins, and ongoing oversight are handled by the same physician-led team, so your care stays consistent from your first evaluation onward.</p>
+      </div>
+      <div class="edu-visual photo">
+        <img src="images/physician-telehealth-consult.jpg" alt="Board-certified physician reviewing a patient's telehealth intake and treatment plan"/>
+      </div>
     </div>
   </div>
 </section>
@@ -740,7 +775,7 @@ img{max-width:100%;height:auto}
         <p>Clinical studies have associated GLP-1 therapy with significant body weight reduction. Individual results vary based on dose, adherence, diet, and activity level. A physician evaluation is required — not everyone qualifies.</p>
       </div>
       <div class="edu-visual">
-        <img src="images/tirz-vial.svg" alt="Compounded Tirzepatide — Physician supervised GLP-1 therapy"/>
+        <img src="images/tirz-vial.png" alt="Compounded Tirzepatide — Physician supervised GLP-1 therapy"/>
       </div>
     </div>
   </div>
@@ -750,7 +785,7 @@ img{max-width:100%;height:auto}
   <div class="si">
     <div class="edu-inner">
       <div class="edu-visual">
-        <img src="images/sema-vial.svg" alt="Compounded Semaglutide — GLP-1 receptor agonist"/>
+        <img src="images/sema-vial.png" alt="Compounded Semaglutide — GLP-1 receptor agonist"/>
       </div>
       <div class="edu-content">
         <div class="lbl">Semaglutide vs. Tirzepatide</div>
@@ -772,7 +807,7 @@ img{max-width:100%;height:auto}
     <div class="glp-grid" style="grid-template-columns:repeat(2,1fr);max-width:760px">
       <div class="prog-card  anim" data-card>
   
-  <div class="prog-img" style="background:linear-gradient(135deg,#EBF5FB,#F0F8FF)"><img src="images/sema-vial.svg" alt="Compounded Compounded Semaglutide"/></div>
+  <div class="prog-img" style="background:linear-gradient(135deg,#EBF5FB,#F0F8FF)"><img src="images/sema-vial.png" alt="Compounded Compounded Semaglutide"/></div>
   <div class="prog-body">
     <div class="prog-badge" style="background:#00957A18;color:#00957A">GLP-1 Receptor Agonist</div>
     <div class="prog-name">Compounded Semaglutide</div>
@@ -795,7 +830,7 @@ img{max-width:100%;height:auto}
 </div>
       <div class="prog-card prog-card--feat anim" data-card>
   <div class="prog-ribbon">Most Popular</div>
-  <div class="prog-img" style="background:linear-gradient(135deg,#EBF5FB,#F0F8FF)"><img src="images/tirz-vial.svg" alt="Compounded Compounded Tirzepatide"/></div>
+  <div class="prog-img" style="background:linear-gradient(135deg,#EBF5FB,#F0F8FF)"><img src="images/tirz-vial.png" alt="Compounded Compounded Tirzepatide"/></div>
   <div class="prog-body">
     <div class="prog-badge" style="background:#0092CA18;color:#0092CA">Dual GIP/GLP-1 Agonist</div>
     <div class="prog-name">Compounded Tirzepatide</div>
@@ -819,6 +854,22 @@ img{max-width:100%;height:auto}
     </div>
     <div style="background:#FEF3C7;border-left:4px solid #F59E0B;padding:14px 20px;border-radius:0 8px 8px 0;margin-top:24px;max-width:760px;font-size:13px;color:#92400E">
       <strong>Medical Disclaimer:</strong> These statements have not been evaluated by the FDA. Compounded medications are not FDA-approved finished drug products. A physician evaluation and valid prescription are required. Results vary. Not all applicants will qualify. <a href="safety.html" style="color:#92400E;text-decoration:underline">View full safety information →</a>
+    </div>
+  </div>
+</section>
+
+<section class="edu-sect" style="background:var(--offwhite)">
+  <div class="si">
+    <div class="edu-inner">
+      <div class="edu-visual photo">
+        <img src="images/team-diverse-office.jpg" alt="Diverse group of adults representing the range of patients MedFit Health serves nationwide"/>
+      </div>
+      <div class="edu-content">
+        <div class="lbl">Who We Serve</div>
+        <h2>Personalized care, wherever you're starting from</h2>
+        <p>MedFit Health works with adults across all 50 states, at every stage of their health journey. There's no one-size-fits-all protocol — your physician builds a program around your health history, goals, and how you respond over time.</p>
+        <p>Whether you're new to GLP-1 therapy or looking to add peptide support to an existing routine, your care plan is reviewed and adjusted by a real physician, not a fixed script.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -856,7 +907,7 @@ img{max-width:100%;height:auto}
         <a href="#peptides" class="btn btn-outline" style="margin-top:8px">Browse Wellness Programs →</a>
       </div>
       <div class="edu-visual">
-        <img src="images/nad-vial.svg" alt="NAD+ Peptide Therapy — Cellular energy and longevity"/>
+        <img src="images/nad-vial.png" alt="NAD+ Peptide Therapy — Cellular energy and longevity"/>
       </div>
     </div>
   </div>
@@ -871,45 +922,48 @@ img{max-width:100%;height:auto}
     </div>
     <div class="well-cat-section"><div class="well-cat-title">Cellular Energy &amp; Longevity</div><div class="well-grid">
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#fefce8,#fef3c7)"><img src="images/nad-vial.svg" alt="NAD+"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#fefce8,#fef3c7)"><img src="images/nad-vial.png" alt="NAD+"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#F59E0B18;color:#F59E0B">Energy</div>
     <div class="well-name">NAD+</div>
     <div class="well-street">Also known as: NAD / Nicotinamide Adenine Dinucleotide</div>
     <p class="well-desc">Supports mitochondrial energy production. May support cellular repair and healthy metabolic function. Available in 500mg and 1000mg.</p>
+    <a href="peptide-nad.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $179<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$107<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $179/mo ongoing</div></div>
         <a href="https://intake.medfit.health/f/nad" class="btn btn-outline btn-sm">Get Started</a>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7)"><img src="images/glut-vial.svg" alt="Glutathione"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7)"><img src="images/glut-vial.png" alt="Glutathione"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#10B98118;color:#10B981">Cellular Health</div>
     <div class="well-name">Glutathione</div>
     <div class="well-street">Also known as: Gluta / Master Antioxidant / GSH</div>
     <p class="well-desc">A powerful tripeptide antioxidant. May support cellular protection from oxidative stress and immune function.</p>
+    <a href="peptide-glutathione.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#faf5ff,#f3e8ff)"><img src="images/epit-vial.svg" alt="Epithalon"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#faf5ff,#f3e8ff)"><img src="images/epit-vial.png" alt="Epithalon"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#8B5CF618;color:#8B5CF6">Anti-Aging</div>
     <div class="well-name">Epithalon</div>
     <div class="well-street">Also known as: Epitalon / Telomerase Peptide / Pineal Tetrapeptide</div>
     <p class="well-desc">A synthetic tetrapeptide associated with telomere length support and healthy aging at the cellular level.</p>
+    <a href="peptide-epithalon.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
@@ -918,60 +972,64 @@ img{max-width:100%;height:auto}
     </div></div>
     <div class="well-cat-section"><div class="well-cat-title">Weight Loss Support Peptides</div><div class="well-grid">
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#fef9c3,#fef3c7)"><img src="images/lipo-vial.svg" alt="LIPO-B"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#fef9c3,#fef3c7)"><img src="images/lipo-vial.png" alt="LIPO-B"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#0092CA18;color:#0092CA">Metabolic</div>
     <div class="well-name">LIPO-B</div>
     <div class="well-street">Also known as: Lipo Shot / MIC Injection / Lipotropic</div>
     <p class="well-desc">A lipotropic injection combining methionine, inositol, choline, and B12. Used alongside weight management programs.</p>
+    <a href="peptide-lipo-b.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#e6f4fb,#cce9f5)"><img src="images/tesam-vial.svg" alt="Tesamorelin"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#e6f4fb,#cce9f5)"><img src="images/tesam-vial.png" alt="Tesamorelin"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#0092CA18;color:#0092CA">Metabolic</div>
     <div class="well-name">Tesamorelin</div>
     <div class="well-street">Also known as: Tesam / GHRH Analogue</div>
     <p class="well-desc">A synthetic GHRH analogue associated with reductions in visceral adipose tissue and body composition support.</p>
+    <a href="peptide-tesamorelin.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $229<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$137<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $229/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#e6f4fb,#cce9f5)"><img src="images/tesam-vial.svg" alt="Tesamorelin / Ipamorelin"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#e6f4fb,#cce9f5)"><img src="images/tesam-ipa-vial.png" alt="Tesamorelin / Ipamorelin"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#0092CA18;color:#0092CA">Metabolic</div>
     <div class="well-name">Tesamorelin / Ipamorelin</div>
     <div class="well-street">Also known as: Tesam/Ipa / GHRH-GHS Stack</div>
     <p class="well-desc">Synergistic GHRH analogue and GH secretagogue. May support GH release and body composition.</p>
+    <a href="peptide-tesamorelin-ipamorelin.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $249<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$131<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $219/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#e6f4fb,#cce9f5)"><img src="images/mots-vial.svg" alt="MOTS-C"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#e6f4fb,#cce9f5)"><img src="images/mots-vial.png" alt="MOTS-C"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#0092CA18;color:#0092CA">Metabolic</div>
     <div class="well-name">MOTS-C</div>
     <div class="well-street">Also known as: MOTS / Mitochondrial Peptide / Exercise Mimetic</div>
     <p class="well-desc">A mitochondria-derived peptide associated with metabolic regulation and healthy glucose metabolism.</p>
+    <a href="peptide-mots-c.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <a href="https://intake.medfit.health/f/mots-c" class="btn btn-outline btn-sm">Get Started</a>
       </div>
     </div>
@@ -980,60 +1038,64 @@ img{max-width:100%;height:auto}
     </div></div>
     <div class="well-cat-section"><div class="well-cat-title">Muscle Growth &amp; Performance</div><div class="well-grid">
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#fff1f2,#fee2e2)"><img src="images/serm-vial.svg" alt="Sermorelin"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#fff1f2,#fee2e2)"><img src="images/serm-vial.png" alt="Sermorelin"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#EF444418;color:#EF4444">Performance</div>
     <div class="well-name">Sermorelin</div>
     <div class="well-street">Also known as: Serm / GHRH 1-29 / Growth Hormone Releaser</div>
     <p class="well-desc">Stimulates the pituitary to naturally release growth hormone. May support lean muscle, recovery, and sleep depth.</p>
+    <a href="peptide-sermorelin.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <a href="https://intake.medfit.health/f/sermorelin" class="btn btn-outline btn-sm">Get Started</a>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#fff1f2,#fee2e2)"><img src="images/cjc-vial.svg" alt="CJC-1295 / Ipamorelin"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#fff1f2,#fee2e2)"><img src="images/cjc-vial.png" alt="CJC-1295 / Ipamorelin"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#EF444418;color:#EF4444">Performance</div>
     <div class="well-name">CJC-1295 / Ipamorelin</div>
     <div class="well-street">Also known as: CJC/Ipa / Growth Stack / GH Pulse Stack</div>
     <p class="well-desc">Long-acting GHRH analogue paired with a GH secretagogue. Associated with enhanced GH pulses and improved recovery.</p>
+    <a href="peptide-cjc-ipamorelin.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <a href="https://intake.medfit.health/f/cjc-ipa" class="btn btn-outline btn-sm">Get Started</a>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#fff1f2,#fee2e2)"><img src="images/gona-vial.svg" alt="Gonadorelin"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#fff1f2,#fee2e2)"><img src="images/gona-vial.png" alt="Gonadorelin"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#EF444418;color:#EF4444">Performance</div>
     <div class="well-name">Gonadorelin</div>
     <div class="well-street">Also known as: Gona / GnRH / Gonadotropin-Releasing Hormone</div>
     <p class="well-desc">A synthetic GnRH. May support natural hormone production pathways. Often used alongside TRT protocols.</p>
+    <a href="peptide-gonadorelin.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#fff1f2,#fee2e2)"><img src="images/igf-vial.svg" alt="IGF-LR3"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#fff1f2,#fee2e2)"><img src="images/igf-vial.png" alt="IGF-LR3"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#EF444418;color:#EF4444">Performance</div>
     <div class="well-name">IGF-LR3</div>
     <div class="well-street">Also known as: IGF / Long R3 / Insulin-Like Growth Factor</div>
     <p class="well-desc">An extended half-life IGF-1 analogue. Associated with muscle protein synthesis and recovery support.</p>
+    <a href="peptide-igf-lr3.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
@@ -1042,90 +1104,96 @@ img{max-width:100%;height:auto}
     </div></div>
     <div class="well-cat-section"><div class="well-cat-title">Recovery &amp; Healing</div><div class="well-grid">
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><img src="images/bpc-vial.svg" alt="BPC-157"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><img src="images/bpc-vial.png" alt="BPC-157"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#06B6D418;color:#06B6D4">Recovery</div>
     <div class="well-name">BPC-157</div>
     <div class="well-street">Also known as: BPC / Body Protection Compound / Wolverine Peptide</div>
     <p class="well-desc">Studied for tissue repair, gut health, and recovery support. May support tendon, ligament, and joint healing.</p>
+    <a href="peptide-bpc-157.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$179<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <a href="https://intake.medfit.health/f/bpc-157" class="btn btn-outline btn-sm">Get Started</a>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><img src="images/tb500-vial.svg" alt="BPC-157 / TB500"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><img src="images/tb500-vial.png" alt="BPC-157 / TB500"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#06B6D418;color:#06B6D4">Recovery</div>
     <div class="well-name">BPC-157 / TB500</div>
     <div class="well-street">Also known as: Wolverine Stack / BPC-TB / Recovery Duo</div>
     <p class="well-desc">BPC-157 paired with Thymosin Beta-4 for synergistic tissue repair and inflammation management.</p>
+    <a href="peptide-bpc-tb500.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <a href="https://intake.medfit.health/f/bpc-tb" class="btn btn-outline btn-sm">Get Started</a>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><img src="images/triple-vial.svg" alt="BPC-157 / KPV / TB500"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><img src="images/triple-vial.png" alt="BPC-157 / KPV / TB500"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#06B6D418;color:#06B6D4">Recovery</div>
     <div class="well-name">BPC-157 / KPV / TB500</div>
     <div class="well-street">Also known as: Triple Recovery Stack / Advanced Wolverine</div>
     <p class="well-desc">Adds KPV anti-inflammatory tripeptide for broader systemic recovery and inflammation modulation.</p>
+    <a href="peptide-wolverine.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <a href="https://intake.medfit.health/f/wolverine" class="btn btn-outline btn-sm">Get Started</a>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><img src="images/quad-vial.svg" alt="BPC / GHK-Cu / KPV / TB500"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><img src="images/quad-vial.png" alt="BPC / GHK-Cu / KPV / TB500"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#06B6D418;color:#06B6D4">Recovery</div>
     <div class="well-name">BPC / GHK-Cu / KPV / TB500</div>
     <div class="well-street">Also known as: Quad Recovery Stack / Elite Heal</div>
     <p class="well-desc">Advanced quad-peptide blend with GHK-Cu for comprehensive cellular and tissue recovery.</p>
+    <a href="peptide-klow.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <a href="https://intake.medfit.health/f/klow" class="btn btn-outline btn-sm">Get Started</a>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><img src="images/ta1-vial.svg" alt="Thymosin Alpha-1"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><img src="images/ta1-vial.png" alt="Thymosin Alpha-1"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#06B6D418;color:#06B6D4">Immune</div>
     <div class="well-name">Thymosin Alpha-1</div>
     <div class="well-street">Also known as: TA1 / Immune Boost Peptide</div>
     <p class="well-desc">A peptide fragment associated with immune system modulation and immune resilience support.</p>
+    <a href="peptide-thymosin-alpha1.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $209<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$125<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $209/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><img src="images/ll37-vial.svg" alt="LL-37"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#ecfeff,#cffafe)"><img src="images/ll37-vial.png" alt="LL-37"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#06B6D418;color:#06B6D4">Recovery</div>
     <div class="well-name">LL-37</div>
     <div class="well-street">Also known as: LL37 / Cathelicidin / Antimicrobial Peptide</div>
     <p class="well-desc">A human cathelicidin associated with immune defense and tissue repair in research settings.</p>
+    <a href="peptide-ll-37.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
@@ -1134,45 +1202,48 @@ img{max-width:100%;height:auto}
     </div></div>
     <div class="well-cat-section"><div class="well-cat-title">Anti-Aging &amp; Cellular Health</div><div class="well-grid">
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#faf5ff,#f3e8ff)"><img src="images/ghkcu-vial.svg" alt="GHK-Cu"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#faf5ff,#f3e8ff)"><img src="images/ghkcu-vial.png" alt="GHK-Cu"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#8B5CF618;color:#8B5CF6">Anti-Aging</div>
     <div class="well-name">GHK-Cu</div>
     <div class="well-street">Also known as: Copper Peptide / GHK / Skin Repair Peptide</div>
     <p class="well-desc">Copper peptide associated with collagen stimulation, wound healing, and antioxidant activity.</p>
+    <a href="peptide-ghk-cu.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#faf5ff,#f3e8ff)"><img src="images/epit-vial.svg" alt="GHK-Cu / Epithalon"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#faf5ff,#f3e8ff)"><img src="images/ghkcu-epit-vial.png" alt="GHK-Cu / Epithalon"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#8B5CF618;color:#8B5CF6">Anti-Aging</div>
     <div class="well-name">GHK-Cu / Epithalon</div>
     <div class="well-street">Also known as: Copper-Epitalon Blend / Longevity Duo</div>
     <p class="well-desc">Synergistic anti-aging combination. May support cellular longevity, tissue repair, and antioxidant defense.</p>
+    <a href="peptide-ghk-epithalon.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#faf5ff,#f3e8ff)"><img src="images/pineal-vial.svg" alt="Pinealon / PE22-28 / Selank"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#faf5ff,#f3e8ff)"><img src="images/pineal-vial.png" alt="Pinealon / PE22-28 / Selank"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#8B5CF618;color:#8B5CF6">Cellular</div>
     <div class="well-name">Pinealon / PE22-28 / Selank</div>
     <div class="well-street">Also known as: Pinealon Stack / Neuroprotective Blend</div>
     <p class="well-desc">Triple-peptide blend for cognitive and cellular health support.</p>
+    <a href="peptide-pinealon.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $219<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$131<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $219/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
@@ -1181,45 +1252,48 @@ img{max-width:100%;height:auto}
     </div></div>
     <div class="well-cat-section"><div class="well-cat-title">Cognitive &amp; Mood Support</div><div class="well-grid">
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#eef2ff,#e0e7ff)"><img src="images/dsip-vial.svg" alt="DSIP"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#eef2ff,#e0e7ff)"><img src="images/dsip-vial.png" alt="DSIP"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#6366F118;color:#6366F1">Cognitive</div>
     <div class="well-name">DSIP</div>
     <div class="well-street">Also known as: Delta Sleep Peptide / Sleep Neuropeptide</div>
     <p class="well-desc">A neuropeptide associated with sleep quality, stress reduction, and circadian rhythm support.</p>
+    <a href="peptide-dsip.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#eef2ff,#e0e7ff)"><img src="images/semax-vial.svg" alt="Semax / Selank"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#eef2ff,#e0e7ff)"><img src="images/semax-vial.png" alt="Semax / Selank"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#6366F118;color:#6366F1">Cognitive</div>
     <div class="well-name">Semax / Selank</div>
     <div class="well-street">Also known as: Nootropic Stack / Russian Nootropics</div>
     <p class="well-desc">Semax associated with cognitive enhancement; Selank with anxiolytic effects. May support mental clarity.</p>
+    <a href="peptide-semax-selank.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $219<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$131<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $219/mo ongoing</div></div>
         <a href="https://intake.medfit.health/f/semax-selank" class="btn btn-outline btn-sm">Get Started</a>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#eef2ff,#e0e7ff)"><img src="images/bpc-vial.svg" alt="DSIP / BPC-157 / CJC-1295"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#eef2ff,#e0e7ff)"><img src="images/dsip-bpc-cjc-vial.png" alt="DSIP / BPC-157 / CJC-1295"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#6366F118;color:#6366F1">Cognitive</div>
     <div class="well-name">DSIP / BPC-157 / CJC-1295</div>
     <div class="well-street">Also known as: Sleep-Recovery-Growth Stack</div>
     <p class="well-desc">Multi-target combination for sleep quality, gut-brain axis, and growth hormone release support.</p>
+    <a href="peptide-dsip-bpc-cjc.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
@@ -1228,30 +1302,32 @@ img{max-width:100%;height:auto}
     </div></div>
     <div class="well-cat-section"><div class="well-cat-title">Sexual Health &amp; Hormonal Support</div><div class="well-grid">
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#fdf2f8,#fce7f3)"><img src="images/pt141-vial.svg" alt="PT-141"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#fdf2f8,#fce7f3)"><img src="images/pt141-vial.png" alt="PT-141"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#EC489918;color:#EC4899">Sexual Health</div>
     <div class="well-name">PT-141</div>
     <div class="well-street">Also known as: PT-141 / Bremelanotide / The Love Drug</div>
     <p class="well-desc">A melanocortin receptor agonist associated with sexual arousal in both men and women via CNS pathways.</p>
+    <a href="peptide-pt141.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <a href="https://intake.medfit.health/f/pt-141" class="btn btn-outline btn-sm">Get Started</a>
       </div>
     </div>
   </div>
 </div>
       <div class="well-card anim" data-card>
-  <div class="well-img" style="background:linear-gradient(135deg,#fdf2f8,#fce7f3)"><img src="images/kiss-vial.svg" alt="Kisspeptin"/></div>
+  <div class="well-img" style="background:linear-gradient(135deg,#fdf2f8,#fce7f3)"><img src="images/kiss-vial.png" alt="Kisspeptin"/></div>
   <div class="well-body">
     <div class="well-cat-badge" style="background:#EC489918;color:#EC4899">Hormonal</div>
     <div class="well-name">Kisspeptin</div>
     <div class="well-street">Also known as: Kiss-1 / Kisspeptin-10 / Reproductive Peptide</div>
     <p class="well-desc">A neuropeptide regulating reproductive hormone pathways. Associated with supporting natural hormone release.</p>
+    <a href="peptide-kisspeptin.html" style="font-size:13px;font-weight:600;color:var(--blue);display:inline-block;margin-bottom:4px">Learn More →</a>
     <div class="well-pricing">
       <div style="display:flex;align-items:center;justify-content:space-between;padding-top:10px;border-top:1px solid var(--border)">
-        <span style="font-size:18px;font-weight:700;color:var(--blue)">From $199<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo</span></span>
+        <div><span style="font-size:18px;font-weight:700;color:var(--blue)">$119<span style="font-size:12px;font-weight:400;color:var(--slate-light)">/mo first month</span></span><div style="font-size:11px;color:var(--slate-light);margin-top:2px">then $199/mo ongoing</div></div>
         <span style="display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:#F3F4F6;color:#9CA3AF;border-radius:4px;padding:5px 10px;border:1px solid #E5E7EB">Coming Soon</span>
       </div>
     </div>
