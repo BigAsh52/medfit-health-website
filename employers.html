@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>MedFit Health — For Employers, Brokers, TPAs &amp; GAs</title>
+<meta name="description" content="Save 60%+ on GLP-1 costs for your workforce. MedFit Health delivers physician-supervised programs to employer groups, brokers, TPAs, and associations. LegitScript Certified."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/><style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#0092CA;--blue-dark:#006E9A;--blue-light:#E6F4FB;
+  --navy:#0B1E32;--navy-mid:#162D45;--slate:#4A5568;--slate-light:#718096;
+  --offwhite:#F7F9FC;--white:#FFFFFF;--border:#DDE4EE;
+  --shadow-sm:0 1px 3px rgba(11,30,50,.08);
+  --shadow-md:0 4px 16px rgba(11,30,50,.11);
+  --shadow-lg:0 8px 40px rgba(11,30,50,.15);
+  --radius:10px;--radius-lg:16px;--max-w:1160px;
+  --font-display:'Fraunces',Georgia,serif;
+  --font-body:'Inter',system-ui,sans-serif
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);color:var(--navy);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}ul{list-style:none}img{max-width:100%;display:block}
+.si{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+.lbl{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+.sub{font-size:18px;color:var(--slate);max-width:660px;margin-top:16px;line-height:1.7}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:6px;font-family:var(--font-body);font-size:15px;font-weight:600;cursor:pointer;transition:all .18s;border:2px solid transparent;white-space:nowrap;text-decoration:none}
+.btn-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+.btn-primary:hover{background:var(--blue-dark);border-color:var(--blue-dark);transform:translateY(-1px);box-shadow:var(--shadow-md)}
+.btn-outline{background:transparent;color:var(--blue);border-color:var(--blue)}
+.btn-outline:hover{background:var(--blue);color:#fff;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--navy);border-color:var(--border)}
+.btn-ghost:hover{border-color:var(--navy);background:var(--offwhite)}
+.btn-white{background:#fff;color:var(--navy);border-color:#fff;font-weight:700}
+.btn-white:hover{background:var(--offwhite);transform:translateY(-1px)}
+.btn-ow{background:transparent;color:#fff;border-color:rgba(255,255,255,.5)}
+.btn-ow:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.btn-lg{padding:15px 32px;font-size:16px;border-radius:7px}
+.btn-full{width:100%}
+.btn-sm{padding:8px 16px;font-size:13px}
+/* TOP BAR */
+.topbar{background:var(--navy);border-bottom:1px solid rgba(255,255,255,.06)}
+.topbar-inner{max-width:var(--max-w);margin:0 auto;padding:9px 24px;display:flex;align-items:center;justify-content:flex-end;gap:24px;flex-wrap:wrap}
+.topbar-item{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:500;color:rgba(255,255,255,.6);transition:color .15s}
+.topbar-item:hover{color:var(--blue)}
+.topbar-item svg{color:var(--blue);flex-shrink:0}
+.topbar-div{width:1px;height:14px;background:rgba(255,255,255,.12)}
+/* NAV */
+.hdr{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);transition:box-shadow .2s}
+.hdr.sc{box-shadow:var(--shadow-md)}
+.nav{max-width:var(--max-w);margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;gap:32px}
+.logo{display:flex;align-items:center;flex-shrink:0}
+.logo img{height:44px;width:auto}
+.nl{display:flex;align-items:center;gap:28px;margin-left:auto}
+.nl a{font-size:14px;font-weight:500;color:var(--slate);transition:color .15s}
+.nl a:hover,.nl a.active{color:var(--navy)}
+.nl a.active{font-weight:700;color:var(--blue)}
+.nc{display:flex;align-items:center;gap:10px;margin-left:16px}
+.nc .btn{padding:9px 18px;font-size:14px}
+.nt{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;margin-left:auto;padding:4px}
+.nt span{display:block;width:24px;height:2px;background:var(--navy);border-radius:2px;transition:all .2s}
+.mm{display:none;background:#fff;border-top:1px solid var(--border);padding:16px 24px 24px}
+.mm ul{display:flex;flex-direction:column;gap:4px}
+.mm a{display:block;padding:10px 0;font-size:16px;font-weight:500;color:var(--navy)}
+.mm .btn{margin-top:8px}
+.mm.open{display:block}
+/* FOOTER */
+.ft{background:var(--navy);padding:64px 0 0}
+.fti{max-width:var(--max-w);margin:0 auto;padding:0 24px 48px;display:grid;grid-template-columns:1.5fr 2fr;gap:64px;border-bottom:1px solid rgba(255,255,255,.07)}
+.ftb img{height:42px;width:auto;margin-bottom:20px}
+.ftb p{font-size:13px;color:rgba(255,255,255,.42);line-height:1.65;max-width:300px;margin-bottom:20px}
+.ft-contact{display:flex;flex-direction:column;gap:10px}
+.ft-contact a{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,.6);transition:color .15s;line-height:1.5}
+.ft-contact a:hover{color:var(--blue)}
+.ft-contact svg{color:var(--blue);flex-shrink:0;margin-top:2px}
+.ftlinks{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.ftcol h4{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:14px}
+.ftcol ul{display:flex;flex-direction:column;gap:10px}
+.ftcol a{font-size:13px;color:rgba(255,255,255,.55);transition:color .15s}
+.ftcol a:hover{color:#fff}
+.ftbot{background:rgba(0,0,0,.2);padding:20px 0}
+.ftboti{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+.ftleg{font-size:12px;color:rgba(255,255,255,.3);margin-bottom:8px}
+.ftleg a{color:rgba(255,255,255,.38);text-decoration:underline}
+.ftdisc{font-size:11px;color:rgba(255,255,255,.18);line-height:1.6}
+.ls-wrap{margin-top:20px}
+.ls-wrap img{height:55px;width:auto}
+.ls-wrap p{font-size:11px;color:rgba(255,255,255,.3);margin-top:6px}
+@media(max-width:960px){
+  .fti{grid-template-columns:1fr;gap:40px}
+  .topbar-item:nth-child(n+4){display:none}
+  .topbar-div:nth-child(n+3){display:none}
+}
+@media(max-width:680px){
+  .nl,.nc{display:none}.nt{display:flex}
+  .ftlinks{grid-template-columns:repeat(2,1fr)}
+}
+/* ── SHARED NAV/FOOTER ─────────── */
+.topbar{background:var(--navy);border-bottom:1px solid rgba(255,255,255,.06)}
+.topbar-inner{max-width:var(--max-w);margin:0 auto;padding:8px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.topbar-item{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:500;color:rgba(255,255,255,.6);transition:color .15s;text-decoration:none}
+.topbar-item:hover{color:var(--blue)}
+.topbar-item svg{color:var(--blue);flex-shrink:0}
+.topbar-div{width:1px;height:14px;background:rgba(255,255,255,.12)}
+.hdr{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);transition:box-shadow .2s}
+.hdr.sc{box-shadow:var(--shadow-md)}
+.nav{max-width:var(--max-w);margin:0 auto;padding:0 24px;height:72px;display:flex;align-items:center;gap:32px}
+.logo{display:flex;align-items:center;flex-shrink:0}
+.logo img{height:44px;width:auto}
+.nl{display:flex;align-items:center;gap:28px;margin-left:auto;list-style:none;padding:0}
+.nl a{font-size:14px;font-weight:500;color:var(--slate);transition:color .15s;text-decoration:none}
+.nl a:hover,.nl a.active{color:var(--navy)}
+.nl a.active{font-weight:700;color:var(--blue)}
+.nc{display:flex;align-items:center;gap:10px;margin-left:16px}
+.nc .btn{padding:9px 18px;font-size:14px}
+.nt{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;margin-left:auto;padding:4px}
+.nt span{display:block;width:24px;height:2px;background:var(--navy);border-radius:2px;transition:all .2s}
+.mm{display:none;background:#fff;border-top:1px solid var(--border);padding:16px 24px 24px}
+.mm ul{display:flex;flex-direction:column;gap:4px;list-style:none;padding:0}
+.mm a{display:block;padding:10px 0;font-size:16px;font-weight:500;color:var(--navy);text-decoration:none}
+.mm .btn{margin-top:8px}
+.mm.open{display:block}
+/* TRUST BAR */
+.tb{background:var(--navy);border-top:1px solid rgba(255,255,255,.05)}
+.tbi{max-width:var(--max-w);margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.tbitem{display:flex;align-items:center;gap:7px;font-size:12.5px;font-weight:500;color:rgba(255,255,255,.5)}
+.tbitem svg{color:var(--blue);flex-shrink:0}
+/* FOOTER */
+.ft{background:var(--navy);padding:64px 0 0}
+.fti{max-width:var(--max-w);margin:0 auto;padding:0 24px 48px;display:grid;grid-template-columns:1.5fr 2fr;gap:64px;border-bottom:1px solid rgba(255,255,255,.07)}
+.ftb .ftlogo{height:42px;width:auto;margin-bottom:18px;display:block}
+.ftb p{font-size:13px;color:rgba(255,255,255,.42);line-height:1.65;max-width:300px;margin-bottom:18px}
+.ft-contact{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
+.ft-contact a{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:rgba(255,255,255,.6);transition:color .15s;line-height:1.5;text-decoration:none}
+.ft-contact a:hover{color:var(--blue)}
+.ft-contact svg{color:var(--blue);flex-shrink:0;margin-top:2px}
+.ftlinks{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.ftcol h4{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:14px}
+.ftcol ul{display:flex;flex-direction:column;gap:10px;list-style:none;padding:0}
+.ftcol a{font-size:13px;color:rgba(255,255,255,.55);transition:color .15s;text-decoration:none}
+.ftcol a:hover{color:#fff}
+.ftbot{background:rgba(0,0,0,.2);padding:20px 0}
+.ftboti{max-width:var(--max-w);margin:0 auto;padding:0 24px}
+.ftleg{font-size:12px;color:rgba(255,255,255,.3);margin-bottom:8px}
+.ftleg a{color:rgba(255,255,255,.38);text-decoration:underline}
+.ftdisc{font-size:11px;color:rgba(255,255,255,.18);line-height:1.6}
+/* PROGRAMS PAGE */
+.phdr{background:linear-gradient(140deg,var(--navy) 0%,var(--navy-mid) 60%,#1A3A5C 100%);padding:64px 0 48px}
+.phdr h1{font-family:var(--font-display);font-size:clamp(30px,4vw,46px);font-weight:300;color:#fff;letter-spacing:-.02em;line-height:1.2}
+.phdr h1 em{font-style:italic;color:var(--blue)}
+.phdr p{font-size:16px;color:rgba(255,255,255,.65);margin-top:14px;max-width:560px;line-height:1.7}
+.cat-note{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:5px 12px;border-radius:20px;margin-bottom:10px}
+.cat-note--emp{background:#E6F4FB;color:var(--blue-dark)}
+.cat-note--ind{background:#F3F4F6;color:var(--slate)}
+.cat-header{padding:52px 0 28px}
+.cat-title{font-family:var(--font-display);font-size:clamp(24px,2.8vw,34px);font-weight:300;letter-spacing:-.02em;margin-bottom:8px}
+.cat-sub{font-size:15px;color:var(--slate);max-width:640px;line-height:1.65}
+.disc-banner{background:#FEF3C7;border-top:3px solid #F59E0B;padding:18px 0}
+.disc-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:flex;align-items:flex-start;gap:14px}
+.disc-icon{color:#D97706;flex-shrink:0;margin-top:2px}
+.disc-text{font-size:13px;color:#92400E;line-height:1.6}
+.disc-text strong{display:block;margin-bottom:3px}
+/* GLP CARDS */
+.glp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-bottom:20px}
+.prog-card{border:1px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;position:relative;transition:all .22s;background:#fff}
+.prog-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px)}
+.prog-card--feat{border-color:var(--blue);border-width:2px}
+.prog-card--cs{opacity:.8}.prog-card--cs:hover{opacity:1}
+.prog-ribbon{position:absolute;top:0;right:24px;background:var(--blue);color:#fff;font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:0 0 6px 6px;z-index:2}
+.prog-img{padding:32px 24px;display:flex;align-items:center;justify-content:center;min-height:200px}
+.prog-img img{height:170px;width:auto;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(11,30,50,.15));transition:transform .35s}
+.prog-card:hover .prog-img img{transform:scale(1.06) translateY(-5px)}
+.prog-body{padding:16px 22px 22px}
+.prog-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:4px;margin-bottom:8px}
+.prog-name{font-size:20px;font-weight:700;letter-spacing:-.02em;margin-bottom:6px}
+.prog-desc{font-size:13px;color:var(--slate);line-height:1.65;margin-bottom:14px}
+.prog-feats{margin-bottom:16px;list-style:none;padding:0}
+.prog-feats li{font-size:12px;color:var(--slate);padding:5px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:7px}
+.prog-feats li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0}
+.supply-toggle{display:flex;background:var(--offwhite);border-radius:8px;padding:3px;margin-bottom:12px}
+.supply-btn{flex:1;padding:7px;border:none;background:transparent;border-radius:6px;font-size:12px;font-weight:600;color:var(--slate);cursor:pointer;transition:all .15s;font-family:var(--font-body)}
+.supply-btn.active{background:#fff;color:var(--blue);box-shadow:var(--shadow-sm)}
+.supply-panel{max-height:280px;overflow-y:auto}
+.dose-header{display:grid;grid-template-columns:1fr auto auto;gap:8px;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--slate-light);padding:0 0 6px;border-bottom:1px solid var(--border);margin-bottom:4px;position:sticky;top:0;background:#fff;z-index:1}
+.dose-row{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid #F0F4F8}
+.dose-row:last-child{border-bottom:none}
+.dose-name{font-size:12px;color:var(--navy);font-weight:500}
+.dose-price{font-size:13px;font-weight:700;color:var(--blue);white-space:nowrap}
+.dose-row .btn-sm{padding:5px 10px;font-size:11px;border-radius:4px;white-space:nowrap}
+/* WELLNESS */
+.well-section{background:var(--offwhite);padding:16px 0 60px}
+.well-cat-section{margin-bottom:40px}
+.well-cat-title{font-size:15px;font-weight:700;color:var(--navy);margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.well-cat-title::after{content:'';flex:1;height:1px;background:var(--border)}
+.well-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.well-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all .2s}
+.well-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--blue)}
+.well-img{display:flex;align-items:center;justify-content:center;padding:16px;min-height:110px}
+.well-img img{height:85px;width:auto;object-fit:contain;filter:drop-shadow(0 4px 12px rgba(11,30,50,.12));transition:transform .3s}
+.well-card:hover .well-img img{transform:scale(1.07) translateY(-3px)}
+.well-body{padding:12px 14px 16px}
+.well-cat-badge{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:3px;margin-bottom:6px}
+.well-name{font-size:14px;font-weight:700;letter-spacing:-.01em;margin-bottom:2px}
+.well-street{font-size:11px;font-style:italic;color:var(--slate-light);margin-bottom:8px}
+.well-desc{font-size:11.5px;color:var(--slate);line-height:1.6;margin-bottom:10px}
+.well-pricing{border-top:1px solid var(--border);padding-top:10px}
+/* COMING SOON */
+.cs-strip{background:var(--navy);padding:48px 0}
+.cs-strip-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cs-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-lg);padding:24px;text-align:center}
+.cs-badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4);background:rgba(255,255,255,.07);padding:3px 10px;border-radius:4px;margin-bottom:12px}
+.cs-name{font-size:18px;font-weight:700;color:#fff;margin-bottom:8px}
+.cs-desc{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6;margin-bottom:16px}
+/* PATIENT FORM */
+.pt-contact{background:#fff;padding:80px 0;border-top:2px solid var(--border)}
+.pt-inner{display:grid;grid-template-columns:1fr 1.4fr;gap:64px;align-items:start}
+.pt-info h2{font-family:var(--font-display);font-size:clamp(22px,2.6vw,32px);font-weight:300;letter-spacing:-.02em;line-height:1.25;margin-bottom:14px}
+.pt-info p{font-size:15px;color:var(--slate);line-height:1.75;margin-bottom:16px}
+.pt-details{display:flex;flex-direction:column;gap:12px}
+.pt-detail{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--slate)}
+.pt-detail a{color:var(--blue);font-weight:500}
+.pt-detail svg{color:var(--blue);flex-shrink:0;margin-top:2px}
+.pt-form-card{background:var(--offwhite);border:1px solid var(--border);border-radius:var(--radius-lg);padding:32px}
+.form-title{font-size:17px;font-weight:700;letter-spacing:-.02em;margin-bottom:4px}
+.form-sub{font-size:13px;color:var(--slate-light);margin-bottom:22px}
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:13px;font-weight:600;color:var(--navy);margin-bottom:6px}
+.form-group label span{color:#EF4444;margin-left:2px}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:6px;font-family:var(--font-body);font-size:14px;color:var(--navy);background:#fff;transition:border-color .15s,box-shadow .15s;outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(0,146,202,.1)}
+.form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%234A5568' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px}
+.form-group textarea{resize:vertical;min-height:90px}
+.pt-form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pt-submit{width:100%;padding:13px;background:var(--blue);color:#fff;border:none;border-radius:7px;font-family:var(--font-body);font-size:15px;font-weight:700;cursor:pointer;transition:background .18s,transform .15s;margin-top:4px}
+.pt-submit:hover{background:var(--blue-dark);transform:translateY(-1px)}
+.pt-note{font-size:11px;color:var(--slate-light);margin-top:10px;line-height:1.5;text-align:center}
+.pt-success{display:none;background:#D1FAE5;border:1px solid #6EE7B7;border-radius:8px;padding:20px;text-align:center;margin-top:14px}
+.pt-success h4{font-size:15px;font-weight:700;color:#065F46;margin-bottom:4px}
+.pt-success p{font-size:13px;color:#047857}
+/* EMPLOYER PAGE EXTRAS */
+.hero-emp{background:linear-gradient(140deg,var(--navy) 0%,var(--navy-mid) 55%,#1A3A5C 100%);padding:88px 0 64px;position:relative;overflow:hidden}
+.hero-emp::before{content:'';position:absolute;top:-180px;right:-180px;width:580px;height:580px;background:radial-gradient(circle,rgba(0,146,202,.18) 0%,transparent 68%);pointer-events:none}
+.hi{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.ey{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:20px;display:flex;align-items:center;gap:8px}
+.ey::before{content:'';display:block;width:24px;height:2px;background:var(--blue);border-radius:2px}
+.hero-emp h1{font-family:var(--font-display);font-size:clamp(32px,4vw,52px);font-weight:300;line-height:1.15;color:#fff;letter-spacing:-.02em}
+.hero-emp h1 em{font-style:italic;color:var(--blue)}
+.hsub{font-size:17px;color:rgba(255,255,255,.68);margin-top:20px;line-height:1.78;max-width:500px}
+.ha{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
+.htrust{display:flex;align-items:center;gap:24px;margin-top:40px;padding-top:32px;border-top:1px solid rgba(255,255,255,.1)}
+.ti{text-align:center}
+.tn{display:block;font-size:20px;font-weight:700;color:#fff;letter-spacing:-.03em}
+.tl{display:block;font-size:11px;color:rgba(255,255,255,.45);font-weight:500;margin-top:3px;white-space:nowrap}
+.td{width:1px;height:36px;background:rgba(255,255,255,.12)}
+.hero-savings{display:flex;flex-direction:column;gap:16px}
+.sav-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius-lg);padding:24px 28px;transition:all .2s}
+.sav-card--hero{background:rgba(0,146,202,.12);border-color:rgba(0,146,202,.35)}
+.sav-num{font-size:48px;font-weight:800;color:var(--blue);letter-spacing:-.04em;line-height:1}
+.sav-label{font-size:14px;color:rgba(255,255,255,.7);margin-top:6px;line-height:1.5}
+.sav-sub{font-size:12px;color:rgba(255,255,255,.4);margin-top:4px}
+.sav-row{display:flex;gap:16px}
+.sav-mini{flex:1;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius);padding:16px;text-align:center}
+.sav-mini-num{font-size:22px;font-weight:700;color:#fff;letter-spacing:-.03em}
+.sav-mini-lbl{font-size:11px;color:rgba(255,255,255,.45);margin-top:3px}
+.lead{background:linear-gradient(135deg,#0D2540 0%,#162D45 100%);padding:80px 0}
+.lead-inner{max-width:var(--max-w);margin:0 auto;padding:0 24px;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.lead h2{font-family:var(--font-display);font-size:clamp(28px,3.2vw,42px);font-weight:300;color:#fff;letter-spacing:-.02em;line-height:1.25;margin-bottom:16px}
+.lead h2 em{font-style:italic;color:var(--blue)}
+.lead p{font-size:15px;color:rgba(255,255,255,.6);line-height:1.75;margin-bottom:16px}
+.lead-step{display:flex;align-items:flex-start;gap:14px;margin-bottom:16px}
+.lead-step-num{width:28px;height:28px;background:var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0;margin-top:2px}
+.lead-step-body h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:3px}
+.lead-step-body p{font-size:13px;color:rgba(255,255,255,.5);line-height:1.5;margin:0}
+.lead-visual{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:32px}
+.lv-header{display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.08)}
+.lv-icon{width:44px;height:44px;background:rgba(0,146,202,.2);border-radius:10px;display:flex;align-items:center;justify-content:center;color:var(--blue)}
+.lv-title{font-size:16px;font-weight:700;color:#fff}
+.lv-sub{font-size:12px;color:rgba(255,255,255,.4);margin-top:2px}
+.comp-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.comp-label{font-size:12px;color:rgba(255,255,255,.5)}
+.comp-head{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.3);text-align:center}
+.comp-before{font-size:14px;font-weight:600;color:rgba(255,100,100,.8);text-align:center}
+.comp-after{font-size:14px;font-weight:700;color:var(--blue);text-align:center}
+.lv-cta{width:100%;text-align:center;padding:14px;background:var(--blue);color:#fff;border-radius:8px;font-weight:700;font-size:15px;border:none;cursor:pointer;transition:background .18s;display:block;text-decoration:none}
+.lv-cta:hover{background:var(--blue-dark)}
+.calc-field{margin-bottom:16px}
+.calc-label{display:block;font-size:12.5px;font-weight:600;color:rgba(255,255,255,.75);margin-bottom:6px}
+.calc-input{width:100%;padding:10px 14px;border:1.5px solid rgba(255,255,255,.15);border-radius:6px;font-family:var(--font-body);font-size:14px;color:#fff;background:rgba(255,255,255,.06);outline:none;transition:border-color .15s}
+.calc-input:focus{border-color:var(--blue)}
+.calc-input option{color:var(--navy)}
+.calc-hint{font-size:11.5px;color:rgba(255,255,255,.4);margin-top:5px;line-height:1.5}
+.fe-sect{background:var(--offwhite);padding:100px 0}
+.fe-sect h2{font-family:var(--font-display);font-size:clamp(30px,3.5vw,44px);font-weight:300;letter-spacing:-.02em;max-width:600px;line-height:1.25}
+.eg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:52px}
+.ec{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;transition:all .2s}
+.ec:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.ei{width:52px;height:52px;background:var(--blue-light);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--blue-dark);margin-bottom:18px}
+.ec h3{font-size:17px;font-weight:700;margin-bottom:10px;letter-spacing:-.02em}
+.ec p{font-size:14px;color:var(--slate);line-height:1.65}
+.emp-photo-sect{padding:20px 0 40px}
+.emp-photo-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-top:52px}
+.emp-photo-visual{border-radius:20px;overflow:hidden;min-height:360px;box-shadow:0 20px 50px rgba(11,30,50,.16)}
+.emp-photo-visual img{width:100%;height:100%;object-fit:cover;display:block}
+@media(max-width:860px){.emp-photo-inner{grid-template-columns:1fr}}
+.ec--cta{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-color:transparent;display:flex;flex-direction:column;justify-content:center}
+.ec--cta h3{color:#fff}.ec--cta p{color:rgba(255,255,255,.55);margin-bottom:16px}
+.hiw-sect{background:var(--navy);padding:100px 0}
+.hiw-sect .lbl{color:rgba(0,146,202,.85)}
+.hiw-sect h2{font-family:var(--font-display);font-size:clamp(28px,3.2vw,42px);font-weight:300;color:#fff;letter-spacing:-.02em;max-width:560px;line-height:1.25}
+.steps{display:flex;align-items:flex-start;margin-top:56px}
+.step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center}
+.snum{width:52px;height:52px;border:2px solid var(--blue);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:var(--blue);flex-shrink:0;margin-bottom:20px;background:rgba(0,146,202,.07)}
+.sbody h3{font-size:16px;font-weight:700;color:#fff;margin-bottom:10px}
+.sbody p{font-size:14px;color:rgba(255,255,255,.5);line-height:1.65;max-width:200px;margin:0 auto}
+.sc2{flex:0 0 40px;height:2px;background:linear-gradient(90deg,var(--blue) 0%,rgba(0,146,202,.25) 100%);margin-top:26px;align-self:flex-start}
+.sci-sect{background:var(--offwhite);padding:100px 0}
+.scin{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.scc h2{font-family:var(--font-display);font-size:clamp(28px,3.2vw,40px);font-weight:300;letter-spacing:-.02em;line-height:1.25;margin-bottom:20px}
+.scc p{font-size:15px;color:var(--slate);line-height:1.75;margin-bottom:16px}
+.scs{display:flex;gap:28px;margin-top:36px;padding-top:32px;border-top:1px solid var(--border)}
+.scs div{flex:1}
+.scsn{display:block;font-size:26px;font-weight:700;color:var(--blue-dark);letter-spacing:-.03em}
+.scsd{display:block;font-size:12px;color:var(--slate-light);margin-top:4px;line-height:1.4}
+.cta-sect{background:linear-gradient(135deg,var(--blue-dark) 0%,var(--blue) 100%);padding:80px 0}
+.ctai{display:flex;align-items:center;justify-content:space-between;gap:48px}
+.ctac h2{font-family:var(--font-display);font-size:clamp(26px,3vw,38px);font-weight:300;color:#fff;letter-spacing:-.02em;margin-bottom:10px}
+.ctac p{font-size:16px;color:rgba(255,255,255,.72);max-width:480px}
+.ctaa{display:flex;gap:12px;flex-shrink:0;flex-wrap:wrap}
+/* EMPLOYER FORM */
+.contact-section{background:var(--offwhite);padding:100px 0}
+.contact-inner{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start}
+.contact-info h2{font-family:var(--font-display);font-size:clamp(24px,3vw,34px);font-weight:300;letter-spacing:-.02em;line-height:1.25;margin-bottom:16px}
+.contact-info p{font-size:15px;color:var(--slate);line-height:1.75;margin-bottom:20px}
+.contact-details{display:flex;flex-direction:column;gap:14px;margin-top:8px}
+.cd-item{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:var(--slate)}
+.cd-item a{color:var(--blue);font-weight:500}
+.cd-item svg{color:var(--blue);flex-shrink:0;margin-top:2px}
+.form-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px;box-shadow:var(--shadow-md)}
+.form-title{font-size:18px;font-weight:700;letter-spacing:-.02em;margin-bottom:4px}
+.form-sub{font-size:13px;color:var(--slate-light);margin-bottom:24px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.toggle-row{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.toggle-label{font-size:13px;font-weight:600;color:var(--navy);flex:1}
+.toggle-switch{position:relative;width:44px;height:24px;flex-shrink:0}
+.toggle-switch input{opacity:0;width:0;height:0;position:absolute}
+.toggle-slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background:var(--border);border-radius:24px;transition:.3s}
+.toggle-slider::before{content:'';position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:#fff;border-radius:50%;transition:.3s}
+.toggle-switch input:checked+.toggle-slider{background:var(--blue)}
+.toggle-switch input:checked+.toggle-slider::before{transform:translateX(20px)}
+.multi-loc-fields{display:none;background:var(--blue-light);border-radius:8px;padding:16px;margin-bottom:18px;border-left:3px solid var(--blue)}
+.multi-loc-fields.show{display:block}
+.form-divider{border:none;border-top:1px solid var(--border);margin:20px 0}
+.form-note{font-size:12px;color:var(--slate-light);margin-top:8px;line-height:1.5}
+.form-submit{width:100%;padding:14px;background:var(--blue);color:#fff;border:none;border-radius:7px;font-family:var(--font-body);font-size:16px;font-weight:700;cursor:pointer;transition:background .18s,transform .15s}
+.form-submit:hover{background:var(--blue-dark);transform:translateY(-1px)}
+.success-msg{display:none;background:#D1FAE5;border:1px solid #6EE7B7;border-radius:8px;padding:20px;text-align:center;margin-top:16px}
+.success-msg h4{font-size:16px;font-weight:700;color:#065F46;margin-bottom:4px}
+.success-msg p{font-size:13px;color:#047857}
+/* INDEX */
+.lhero{background:linear-gradient(140deg,var(--navy) 0%,var(--navy-mid) 55%,#1A3A5C 100%);min-height:calc(100vh - 110px);display:flex;align-items:center;justify-content:center;padding:80px 24px;position:relative;overflow:hidden}
+.lhero::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;background:radial-gradient(circle,rgba(0,146,202,.2) 0%,transparent 68%);pointer-events:none}
+.linner{max-width:900px;margin:0 auto;text-align:center;position:relative;z-index:1}
+.llogo{height:64px;width:auto;margin:0 auto 40px;display:block}
+.ley{font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:8px}
+.ley::before,.ley::after{content:'';display:block;width:24px;height:2px;background:var(--blue);border-radius:2px}
+.lhero h1{font-family:var(--font-display);font-size:clamp(36px,5vw,62px);font-weight:300;color:#fff;letter-spacing:-.03em;line-height:1.12;margin-bottom:20px}
+.lhero h1 em{font-style:italic;color:var(--blue)}
+.lsub{font-size:18px;color:rgba(255,255,255,.65);line-height:1.75;max-width:580px;margin:0 auto 56px}
+.pcards{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:760px;margin:0 auto}
+.pcard{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:40px 32px;text-align:center;transition:all .25s;cursor:pointer;text-decoration:none;display:block}
+.pcard:hover{background:rgba(255,255,255,.13);border-color:rgba(0,146,202,.5);transform:translateY(-6px);box-shadow:0 20px 60px rgba(0,0,0,.3)}
+.picon{width:72px;height:72px;background:rgba(0,146,202,.15);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--blue)}
+.pcard h2{font-size:22px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-.02em}
+.pcard p{font-size:14px;color:rgba(255,255,255,.55);line-height:1.65;margin-bottom:24px}
+.ptag{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--blue)}
+.ptag svg{transition:transform .2s}
+.pcard:hover .ptag svg{transform:translateX(4px)}
+.ltrust{display:flex;align-items:center;justify-content:center;gap:28px;margin-top:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.1);flex-wrap:wrap}
+.ltn{display:block;font-size:18px;font-weight:700;color:#fff;letter-spacing:-.03em}
+.ltl{display:block;font-size:11px;color:rgba(255,255,255,.4);margin-top:2px}
+.ltd{width:1px;height:32px;background:rgba(255,255,255,.1)}
+.ls-inline{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:rgba(0,146,202,.9)}
+/* SCROLL HINT */
+.shint{max-width:var(--max-w);margin:44px auto 0;padding:0 24px;display:flex;flex-direction:column;align-items:center;gap:8px}
+.shint span{font-size:11px;color:rgba(255,255,255,.28);letter-spacing:.1em;text-transform:uppercase}
+.sarr{width:18px;height:18px;border-right:2px solid rgba(255,255,255,.22);border-bottom:2px solid rgba(255,255,255,.22);transform:rotate(45deg);animation:bounce 1.8s ease infinite}
+@keyframes bounce{0%,100%{transform:rotate(45deg) translateY(0)}50%{transform:rotate(45deg) translateY(5px)}}
+/* RESPONSIVE */
+@media(max-width:960px){
+  .hi{grid-template-columns:1fr}.hero-savings{display:none}
+  .eg{grid-template-columns:repeat(2,1fr)}
+  .steps{flex-direction:column;align-items:center}
+  .sc2{width:2px;height:28px;background:linear-gradient(180deg,var(--blue) 0%,rgba(0,146,202,.25) 100%);flex:0 0 28px;margin:0}
+  .scin,.lead-inner,.contact-inner{grid-template-columns:1fr}
+  .ctai{flex-direction:column;text-align:center}
+  .fti{grid-template-columns:1fr;gap:40px}
+  .glp-grid{grid-template-columns:repeat(2,1fr)}
+  .well-grid{grid-template-columns:repeat(3,1fr)}
+  .cs-strip-inner{grid-template-columns:1fr}
+  .pt-inner{grid-template-columns:1fr}
+}
+@media(max-width:680px){
+  .nl,.nc{display:none}.nt{display:flex}
+  .eg{grid-template-columns:1fr}
+  .tbi{justify-content:center}
+  .ftlinks{grid-template-columns:repeat(2,1fr)}
+  .glp-grid{grid-template-columns:1fr}
+  .well-grid{grid-template-columns:repeat(2,1fr)}
+  .pcards{grid-template-columns:1fr}
+  .ltrust{gap:16px}.ltd{display:none}
+  .topbar-item:nth-child(n+4){display:none}
+  .topbar-div:nth-child(n+3){display:none}
+  .form-row,.pt-form-row{grid-template-columns:1fr}
+}
+@media(max-width:480px){.well-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,.sarr{animation:none!important;transition:none!important}}</style><link rel="icon" type="image/png" href="/images/favicon.png"/>
+<link rel="apple-touch-icon" href="/images/favicon.png"/>
+<style>
+/* Topbar + header pin, done in JS rather than relying on CSS position:sticky — a sitewide
+   overflow-x:hidden rule (elsewhere in this stylesheet) makes sticky unreliable across
+   browsers, so this guarantees both stay visible together on scroll. Self-contained: only
+   affects .topbar, .hdr, and #headerSpacer below. */
+.topbar{position:relative}
+.topbar.header-pinned{position:fixed;left:0;right:0;width:100%;z-index:101}
+.hdr{position:relative}
+.hdr.header-pinned{position:fixed;left:0;right:0;width:100%}
+#headerSpacer{display:none}
+#headerSpacer.header-active{display:block}
+</style>
+</head><body>
+<div class="topbar"><div class="topbar-inner">
+  <a href="tel:9182009777" class="topbar-item"><svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(918) 200-9777</a>
+  <div class="topbar-div"></div>
+  <a href="mailto:info@medfit.health" class="topbar-item"><svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>info@medfit.health</a>
+  <div class="topbar-div"></div>
+  <a href="https://maps.google.com/?q=1209+S+Frankfort+Ave+Suite+205+Tulsa+OK+74120" target="_blank" class="topbar-item"><svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke="currentColor" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>1209 S. Frankfort Ave, Suite 205 · Tulsa, OK 74120</a>
+  <div class="topbar-div" style="margin-left:auto"></div>
+  <a href="https://www.legitscript.com/websites/?checker_keywords=medfit.health" target="_blank" rel="noopener" class="topbar-item" style="color:rgba(0,146,202,0.9);font-weight:600">
+    <svg width="14" height="14" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+    LegitScript Certified
+  </a>
+</div></div>
+<header class="hdr" id="hdr"><nav class="nav">
+    <a href="index.html" class="logo"><img src="images/logo-white.png" alt="MedFit Health"/></a>
+    <ul class="nl">
+      <li><a href="employers.html" class="active">For Employers</a></li>
+      <li><a href="index.html" >Programs</a></li>
+      <li><a href="employers.html#science">Our Standards</a></li>
+      <li><a href="employers.html#hiw">How It Works</a></li>
+    </ul>
+    <div class="nc">
+      <a href="employers.html" class="btn btn-ghost">For Employers</a>
+      <a href="index.html" class="btn btn-primary">Get Started</a>
+    </div>
+    <button class="nt" id="nt" aria-label="Menu"><span></span><span></span><span></span></button>
+  </nav>
+  <div class="mm" id="mm"><ul>
+    <li><a href="employers.html">For Employers</a></li>
+    <li><a href="index.html">Programs</a></li>
+    <li><a href="employers.html#science">Our Standards</a></li>
+    <li><a href="employers.html#hiw">How It Works</a></li>
+    <li><a href="tel:9182009777">(918) 200-9777</a></li>
+    <li><a href="employers.html" class="btn btn-ghost" style="margin-top:8px">For Employers</a></li>
+    <li><a href="index.html" class="btn btn-primary" style="margin-top:8px">Get Started</a></li>
+  </ul></div>
+</header>
+<div id="headerSpacer"></div>
+
+
+<section class="hero-emp">
+  <div class="hi">
+    <div>
+      <div class="ey">For Employers, Brokers, TPAs &amp; GAs</div>
+      <h1>Employer groups cut GLP-1 costs by <em>60% or more</em> — without cutting coverage</h1>
+      <p class="hsub">MedFit delivers physician-supervised GLP-1 programs with the potential for significant savings compared to what your group pays today through traditional brand-name pharmacy benefit channels — fully managed, LegitScript Certified, and no internal infrastructure required.</p>
+      <div class="ha">
+        <a href="tel:9182009777" class="btn btn-primary btn-lg"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>Call (918) 200-9777</a>
+        <a href="mailto:partnerships@medfit.health" class="btn btn-ow btn-lg">Request a Proposal</a>
+      </div>
+      <div class="htrust">
+        <div class="ti"><span class="tn">60%+</span><span class="tl">Avg. Group Savings</span></div>
+        <div class="td"></div>
+        <div class="ti"><span class="tn">50</span><span class="tl">States Served</span></div>
+        <div class="td"></div>
+        <div class="ti"><span class="tn">503B</span><span class="tl">Licensed Pharmacies</span></div>
+        <div class="td"></div>
+        <div class="ti"><span class="tn" style="font-size:14px;letter-spacing:.02em">LegitScript</span><span class="tl">Certified Telehealth</span></div>
+      </div>
+    </div>
+    <div class="hero-savings">
+      <div class="sav-card sav-card--hero">
+        <div class="sav-num">60%+</div>
+        <div class="sav-label">Average savings vs. traditional brand-name pricing<br>for employer groups</div>
+        <div class="sav-sub">Based on typical group pharmacy claims data</div>
+      </div>
+      <div class="sav-row">
+        <div class="sav-mini"><div class="sav-mini-num">$0</div><div class="sav-mini-lbl">Setup Cost</div></div>
+        <div class="sav-mini"><div class="sav-mini-num">30 Days</div><div class="sav-mini-lbl">To Launch</div></div>
+        <div class="sav-mini"><div class="sav-mini-num">100%</div><div class="sav-mini-lbl">Managed</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="shint"><span>Learn more</span><div class="sarr"></div></div>
+</section>
+
+<section class="tb"><div class="tbi">
+  <div class="tbitem"><svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>HIPAA &amp; PHI Compliant</div>
+  <div class="tbitem"><svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>Licensed Partner Pharmacies · All 50 States</div>
+  <div class="tbitem"><svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>Board-Certified Physicians · All 50 States</div>
+  <div class="tbitem"><svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 00-1-1h-2a1 1 0 00-1 1v5m4 0H9"/></svg>ISO-Certified Platform</div>
+  <div class="tbitem"><svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Rx Delivered in 4 Days</div>
+  <div class="tbitem" style="color:rgba(0,146,202,0.9);font-weight:600"><svg width="17" height="17" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>LegitScript Certified</div>
+</div></section>
+
+<!-- SAVINGS LEAD MAGNET -->
+<section class="lead">
+  <div class="lead-inner">
+    <div>
+      <div class="lbl" style="color:rgba(0,146,202,.9)">The MedFit Savings Analysis</div>
+      <h2>Send us your pharmacy data.<br>We'll show you <em>exactly what you'd save.</em></h2>
+      <p>Most employer groups are significantly overpaying for GLP-1 therapies through traditional pharmacy benefit channels. We can analyze your current GLP-1 claims data and show you a side-by-side comparison — at no cost and with no obligation. Want a quick ballpark first? Try the instant estimator to the right.</p>
+      <div style="margin:24px 0 32px">
+        <div class="lead-step"><div class="lead-step-num">1</div><div class="lead-step-body"><h4>Share your pharmacy claims data</h4><p>Send us your current GLP-1 utilization report or pharmacy claims summary — a standard report from your PBM or carrier.</p></div></div>
+        <div class="lead-step"><div class="lead-step-num">2</div><div class="lead-step-body"><h4>We run a cost comparison</h4><p>Our team analyzes your current per-member cost vs. MedFit group pricing for equivalent physician-supervised GLP-1 programs.</p></div></div>
+        <div class="lead-step"><div class="lead-step-num">3</div><div class="lead-step-body"><h4>You see your projected savings</h4><p>We present a clear, itemized savings analysis. Most groups find they can save 60% or more — often enough to self-fund the benefit.</p></div></div>
+      </div>
+      <a href="mailto:partnerships@medfit.health?subject=Pharmacy%20Claims%20Analysis%20Request" class="btn btn-primary btn-lg">Request Your Free Savings Analysis</a>
+    </div>
+    <div class="lead-visual">
+      <div class="lv-header">
+        <div class="lv-icon"><svg width="22" height="22" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
+        <div><div class="lv-title">Instant Savings Estimator</div><div class="lv-sub">Enter your group's numbers below</div></div>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label">Employees Currently Using GLP-1s</label>
+        <input type="number" id="calcHeadcount" class="calc-input" placeholder="e.g. 15" min="1"/>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label">Current Avg. Monthly Cost Per Employee</label>
+        <input type="number" id="calcCurrentCost" class="calc-input" placeholder="e.g. 1200" min="1"/>
+        <div class="calc-hint">Most groups report $900–$1,400/month per employee through traditional pharmacy benefit channels before rebates.</div>
+      </div>
+
+      <div class="calc-field">
+        <label class="calc-label">Primary GLP-1 Program Type</label>
+        <select id="calcProgram" class="calc-input">
+          <option value="219">Semaglutide-based programs</option>
+          <option value="299">Tirzepatide-based programs</option>
+          <option value="259" selected>Mix of both</option>
+        </select>
+      </div>
+
+      <button type="button" class="lv-cta" style="border:none;cursor:pointer;width:100%" onclick="calcSavings()">Calculate My Estimated Savings</button>
+
+      <div id="calcResults" style="display:none;margin-top:20px">
+        <div style="border-top:1px solid rgba(255,255,255,.1);padding-top:16px">
+          <div class="comp-row"><div class="comp-label"></div><div class="comp-head">Current Cost</div><div class="comp-head">With MedFit</div></div>
+          <div class="comp-row"><div class="comp-label" style="color:rgba(255,255,255,.6)">Per member / month</div><div class="comp-before" id="rCurrentPM">—</div><div class="comp-after" id="rMedfitPM">—</div></div>
+          <div class="comp-row"><div class="comp-label" style="color:rgba(255,255,255,.6)">Group / month</div><div class="comp-before" id="rCurrentGroup">—</div><div class="comp-after" id="rMedfitGroup">—</div></div>
+          <div class="comp-row"><div class="comp-label" style="color:rgba(255,255,255,.6)">Annual group spend</div><div class="comp-before" id="rCurrentAnnual">—</div><div class="comp-after" id="rMedfitAnnual">—</div></div>
+          <div style="border-top:1px solid rgba(255,255,255,.1);padding-top:12px;margin-top:4px">
+            <div class="comp-row"><div class="comp-label" style="color:#fff;font-weight:700">Estimated annual savings</div><div></div><div class="comp-after" id="rSavings" style="font-size:20px">—</div></div>
+          </div>
+        </div>
+        <div style="font-size:11px;color:rgba(255,255,255,.4);margin-top:14px">*Estimate based on the figures you entered and MedFit's current program pricing. Not a guarantee of savings — actual results depend on your group's utilization, plan design, and negotiated rates.</div>
+      </div>
+
+      <p style="font-size:13px;color:rgba(255,255,255,.55);margin-top:18px;line-height:1.6">Want an exact number? <a href="#contact" style="color:#fff;font-weight:700;text-decoration:underline">Upload your pharmacy claims data</a> for a full custom analysis — no obligation.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+function calcSavings(){
+  var headcount = parseFloat(document.getElementById('calcHeadcount').value);
+  var currentCost = parseFloat(document.getElementById('calcCurrentCost').value);
+  var medfitPM = parseFloat(document.getElementById('calcProgram').value);
+
+  if(!headcount || headcount <= 0 || !currentCost || currentCost <= 0){
+    alert('Please enter your employee count and current monthly cost per employee to calculate an estimate.');
+    return;
+  }
+
+  var currentGroup = currentCost * headcount;
+  var medfitGroup = medfitPM * headcount;
+  var currentAnnual = currentGroup * 12;
+  var medfitAnnual = medfitGroup * 12;
+  var savings = currentAnnual - medfitAnnual;
+
+  function money(n){ return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  document.getElementById('rCurrentPM').textContent = money(currentCost);
+  document.getElementById('rMedfitPM').textContent = '~' + money(medfitPM);
+  document.getElementById('rCurrentGroup').textContent = money(currentGroup);
+  document.getElementById('rMedfitGroup').textContent = '~' + money(medfitGroup);
+  document.getElementById('rCurrentAnnual').textContent = money(currentAnnual);
+  document.getElementById('rMedfitAnnual').textContent = '~' + money(medfitAnnual);
+  document.getElementById('rSavings').textContent = '~' + money(savings > 0 ? savings : 0);
+
+  document.getElementById('calcResults').style.display = 'block';
+}
+</script>
+
+<!-- FOR EMPLOYERS -->
+<section class="fe-sect" id="employers">
+  <div class="si">
+    <div class="lbl">Built for Organizations</div>
+    <h2 class="fe-sect h2" style="font-family:var(--font-display);font-size:clamp(30px,3.5vw,44px);font-weight:300;letter-spacing:-.02em;max-width:620px;line-height:1.25">A smarter GLP-1 benefit — for employers, brokers, TPAs &amp; GAs</h2>
+    <p class="sub">Whether you're self-funded, fully insured, a TPA, general agency, or managing an association, MedFit delivers a clinical program your employees will actually use — without the administrative burden.</p>
+    <div class="eg">
+      <div class="ec anim"><div class="ei"><svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div><h3>Significant Cost Reduction</h3><p>Most groups save 60% or more vs. traditional PBM channel pricing for GLP-1 therapies — without reducing access or clinical quality.</p></div>
+      <div class="ec anim"><div class="ei"><svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg></div><h3>Fully Managed</h3><p>We handle physician oversight, prescription management, pharmacy fulfillment, and patient support. Your HR team simply enrolls employees.</p></div>
+      <div class="ec anim"><div class="ei"><svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div><h3>Flexible Plan Structures</h3><p>Works with self-funded, fully insured, TPA, GA, and association models. GLP-1s are employer-contributable; peptides available as voluntary employee benefits.</p></div>
+      <div class="ec anim"><div class="ei"><svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><h3>LegitScript Certified</h3><p>MedFit Health is LegitScript Certified — the telehealth industry's gold standard for verified legitimacy, regulatory compliance, and patient safety.</p></div>
+      <div class="ec anim"><div class="ei"><svg width="26" height="26" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg></div><h3>30-Day Launch</h3><p>White-glove onboarding for HR teams with employee communications, enrollment access, and a dedicated account manager from day one.</p></div>
+      <div class="ec ec--cta anim">
+        <h3>Ready to see your group's savings?</h3>
+        <p>Call us or send your pharmacy claims data for a free, no-obligation cost comparison.</p>
+        <a href="tel:9182009777" class="btn btn-primary" style="margin-bottom:10px">Call (918) 200-9777</a>
+        <a href="mailto:partnerships@medfit.health" class="btn btn-ow">Email Us</a>
+      </div>
+    </div>
+    <div class="emp-photo-sect">
+      <div class="emp-photo-inner">
+        <div class="emp-photo-visual">
+          <img src="images/broker-tpa-meeting.jpg" alt="Broker and TPA team reviewing a GLP-1 benefit proposal for an employer group"/>
+        </div>
+        <div>
+          <div class="lbl">A Partner, Not Just a Vendor</div>
+          <h2 style="font-family:var(--font-display);font-size:clamp(26px,3vw,36px);font-weight:300;letter-spacing:-.02em;line-height:1.3;margin-bottom:16px">Built alongside the people who present this benefit every day</h2>
+          <p style="font-size:15px;color:var(--slate);line-height:1.75;margin-bottom:14px">Brokers, TPAs, and general agencies work with MedFit directly — not through a support queue. You get a dedicated point of contact who understands plan design, renewal timing, and how to position this benefit alongside the rest of your book.</p>
+          <p style="font-size:15px;color:var(--slate);line-height:1.75">From the initial savings analysis through open enrollment and ongoing utilization reporting, the same team stays with your group.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="hiw-sect" id="hiw">
+  <div class="si">
+    <div class="lbl">The Process</div>
+    <h2 style="font-family:var(--font-display);font-size:clamp(28px,3.2vw,42px);font-weight:300;color:#fff;letter-spacing:-.02em;max-width:560px;line-height:1.25">From first call to employees enrolled — in 30 days</h2>
+    <div class="steps">
+      <div class="step"><div class="snum">01</div><div class="sbody"><h3>Savings Analysis</h3><p>Share your current pharmacy claims. We show you exactly what your group would save with MedFit.</p></div></div>
+      <div class="sc2"></div>
+      <div class="step"><div class="snum">02</div><div class="sbody"><h3>Custom Proposal</h3><p>We build a proposal tailored to your plan design, group size, and budget — no one-size-fits-all pricing.</p></div></div>
+      <div class="sc2"></div>
+      <div class="step"><div class="snum">03</div><div class="sbody"><h3>Onboarding</h3><p>White-glove HR onboarding with employee communications, enrollment portal access, and account manager support.</p></div></div>
+      <div class="sc2"></div>
+      <div class="step"><div class="snum">04</div><div class="sbody"><h3>Employees Enroll</h3><p>Employees complete a HIPAA-secure medical intake online, consult with a physician, and receive medication at home.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CLINICAL STANDARDS -->
+<section class="sci-sect" id="science">
+  <div class="si scin">
+    <div class="scc">
+      <div class="lbl">Clinical Standards</div>
+      <h2 style="font-family:var(--font-display);font-size:clamp(28px,3.2vw,40px);font-weight:300;letter-spacing:-.02em;line-height:1.25;margin-bottom:20px">Clinical-grade quality you can verify</h2>
+      <p>The medications dispensed through MedFit are compounded and distributed by licensed partner pharmacies operating under rigorous quality and compliance standards. Our pharmacy partners are authorized to distribute to patients across all 50 states.</p>
+      <p>Every patient receives ongoing care from a board-certified physician through our telehealth network — also licensed across all 50 states. Our platform is HIPAA-compliant, ISO-certified, and uses end-to-end encryption to protect all patient data. MedFit Health is <strong>LegitScript Certified</strong> — the telehealth industry standard for verified regulatory compliance.</p>
+      <div class="scs">
+        <div><span class="scsn">50</span><span class="scsd">States — physician &amp; pharmacy</span></div>
+        <div><span class="scsn">503B</span><span class="scsd">Licensed pharmacy standard</span></div>
+        <div><span class="scsn">LS ✓</span><span class="scsd">LegitScript Certified</span></div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center">
+      <div style="background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:40px;text-align:center;box-shadow:var(--shadow-md);max-width:360px;width:100%">
+        <img src="images/tirz-vial.png" alt="Licensed 503B Partner Pharmacy Program" style="height:180px;width:auto;object-fit:contain;margin:0 auto 24px;display:block;filter:drop-shadow(0 8px 24px rgba(11,30,50,.15))"/>
+        <div style="font-size:15px;color:var(--slate);margin-bottom:20px">All medications dispensed by<br><strong style="color:var(--navy);font-size:16px">Licensed 503B Partner Pharmacies</strong></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <div style="background:var(--blue-light);border-radius:8px;padding:10px 16px;font-size:12px;font-weight:700;color:var(--blue-dark)">✓ Authorized · All 50 States</div>
+          <div style="background:var(--blue-light);border-radius:8px;padding:10px 16px;font-size:12px;font-weight:700;color:var(--blue-dark)">✓ 503B Outsourcing Standard</div>
+          <div style="background:var(--blue-light);border-radius:8px;padding:10px 16px;font-size:12px;font-weight:700;color:var(--blue-dark)">✓ LegitScript Certified Telehealth</div>
+          <div style="background:var(--blue-light);border-radius:8px;padding:10px 16px;font-size:12px;font-weight:700;color:var(--blue-dark)">✓ Pharmaceutical-Grade Only</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-sect">
+  <div class="si ctai">
+    <div class="ctac">
+      <h2>Bring MedFit to your organization</h2>
+      <p>Self-funded employer, broker, TPA, GA, or association — we'll build a program that fits your plan design, your budget, and your employees' needs.</p>
+    </div>
+    <div class="ctaa">
+      <a href="tel:9182009777" class="btn btn-white btn-lg"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(918) 200-9777</a>
+      <a href="mailto:partnerships@medfit.health" class="btn btn-ow btn-lg">Request a Proposal</a>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact-section" id="contact">
+  <div class="si">
+    <div class="contact-inner">
+      <div class="contact-info">
+        <div class="lbl">Get In Touch</div>
+        <h2>Let's build a program for your organization</h2>
+        <p>Whether you're ready to get started or just want to understand what MedFit could save your group, our team is ready to help. Most groups receive a custom savings analysis within 24 hours.</p>
+        <div class="contact-details">
+          <div class="cd-item"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg><div>Call us<br><a href="tel:9182009777">(918) 200-9777</a></div></div>
+          <div class="cd-item"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg><div>Email partnerships<br><a href="mailto:partnerships@medfit.health">partnerships@medfit.health</a></div></div>
+          <div class="cd-item"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke="currentColor" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg><div>1209 S. Frankfort Ave, Suite 205<br>Tulsa, OK 74120</div></div>
+          <div class="cd-item"><svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><div>Response time<br><strong style="color:var(--navy)">Within 24 business hours</strong></div></div>
+          <div class="cd-item" style="margin-top:8px">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <div style="font-size:13px;font-weight:700;color:var(--blue)">LegitScript Certified Telehealth Provider</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-card">
+        <div class="form-title">Request a Group Proposal</div>
+        <div class="form-sub">Fill out the form below and we'll prepare a custom savings analysis for your organization.</div>
+        <form name="employer-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" id="employer-form">
+          <input type="hidden" name="form-name" value="employer-contact"/>
+          <p style="display:none"><input name="bot-field"/></p>
+          <div class="form-row">
+            <div class="form-group"><label>First Name <span>*</span></label><input type="text" name="first_name" placeholder="Jane" required/></div>
+            <div class="form-group"><label>Last Name <span>*</span></label><input type="text" name="last_name" placeholder="Smith" required/></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Title / Role <span>*</span></label><input type="text" name="title" placeholder="HR Director" required/></div>
+            <div class="form-group"><label>Organization Type <span>*</span></label>
+              <select name="org_type" required>
+                <option value="" disabled selected>Select type...</option>
+                <option>Self-Funded Employer</option>
+                <option>Fully Insured Employer</option>
+                <option>Benefits Broker / Consultant</option>
+                <option>Third-Party Administrator (TPA)</option>
+                <option>General Agency (GA)</option>
+                <option>Association</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Company / Organization Name <span>*</span></label><input type="text" name="company" placeholder="Acme Corporation" required/></div>
+          <div class="form-row">
+            <div class="form-group"><label>Primary Location — City <span>*</span></label><input type="text" name="primary_city" placeholder="Tulsa" required/></div>
+            <div class="form-group"><label>Primary Location — State <span>*</span></label>
+              <select name="primary_state" required><option value='' disabled selected>Select state...</option><option>AL</option><option>AK</option><option>AZ</option><option>AR</option><option>CA</option><option>CO</option><option>CT</option><option>DE</option><option>FL</option><option>GA</option><option>HI</option><option>ID</option><option>IL</option><option>IN</option><option>IA</option><option>KS</option><option>KY</option><option>LA</option><option>ME</option><option>MD</option><option>MA</option><option>MI</option><option>MN</option><option>MS</option><option>MO</option><option>MT</option><option>NE</option><option>NV</option><option>NH</option><option>NJ</option><option>NM</option><option>NY</option><option>NC</option><option>ND</option><option>OH</option><option>OK</option><option>OR</option><option>PA</option><option>RI</option><option>SC</option><option>SD</option><option>TN</option><option>TX</option><option>UT</option><option>VT</option><option>VA</option><option>WA</option><option>WV</option><option>WI</option><option>WY</option></select>
+            </div>
+          </div>
+          <div class="toggle-row">
+            <span class="toggle-label">Does your organization have multiple locations?</span>
+            <label class="toggle-switch"><input type="checkbox" id="multi-loc-toggle" name="multiple_locations" value="Yes"/><span class="toggle-slider"></span></label>
+          </div>
+          <div class="multi-loc-fields" id="multi-loc-fields">
+            <div class="form-row">
+              <div class="form-group" style="margin-bottom:0"><label>Number of Locations</label><input type="number" name="num_locations" placeholder="e.g. 5" min="2"/></div>
+              <div class="form-group" style="margin-bottom:0"><label>States with Employees</label><input type="text" name="employee_states" placeholder="e.g. OK, TX, KS, MO"/></div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Estimated Total Employees <span>*</span></label>
+              <select name="employee_count" required>
+                <option value="" disabled selected>Select range...</option>
+                <option>Under 25</option><option>25 – 99</option><option>100 – 249</option>
+                <option>250 – 499</option><option>500 – 999</option><option>1,000 – 4,999</option><option>5,000+</option>
+              </select>
+            </div>
+            <div class="form-group"><label>Current GLP-1 Status</label>
+              <select name="glp1_status">
+                <option value="" disabled selected>Select status...</option>
+                <option>Currently covering brand-name GLP-1s</option>
+                <option>Exploring GLP-1 coverage options</option>
+                <option>No current GLP-1 benefit</option>
+                <option>Not sure / Need to check</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group"><label>Estimated Annual GLP-1 Spend <span style="color:var(--slate-light);font-weight:400">(optional)</span></label>
+            <select name="glp1_spend">
+              <option value="" selected>Prefer not to say / Unknown</option>
+              <option>Under $50,000</option><option>$50,000 – $149,999</option>
+              <option>$150,000 – $499,999</option><option>$500,000 – $999,999</option><option>$1,000,000+</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Upload Pharmacy Claims / Utilization Report <span style="color:var(--slate-light);font-weight:400">(optional)</span></label>
+            <input type="file" name="claims_data" accept=".pdf,.csv,.xlsx,.xls,.doc,.docx" style="padding:8px 10px"/>
+            <div style="font-size:12px;color:var(--slate-light);margin-top:6px;line-height:1.5">A standard utilization or claims summary report from your PBM or carrier is enough — no patient-level or personally identifiable information is needed. Our team reviews this internally to build your custom cost comparison; it is not published or shared.</div>
+          </div>
+          <hr class="form-divider"/>
+          <div class="form-row">
+            <div class="form-group"><label>Email Address <span>*</span></label><input type="email" name="email" placeholder="jane@company.com" required/></div>
+            <div class="form-group"><label>Phone Number <span>*</span></label><input type="tel" name="phone" placeholder="(918) 555-0100" required/></div>
+          </div>
+          <div class="form-group"><label>How did you hear about MedFit Health?</label>
+            <select name="referral_source">
+              <option value="" selected>Select...</option>
+              <option>Broker / Consultant referral</option><option>Google / Web search</option>
+              <option>LinkedIn</option><option>Conference or event</option>
+              <option>Colleague referral</option><option>Other</option>
+            </select>
+          </div>
+          <div class="form-group"><label>Message / Questions</label><textarea name="message" placeholder="Tell us about your goals, timeline, or any questions..."></textarea></div>
+          <p class="form-note">By submitting this form you agree to be contacted by MedFit Health regarding your inquiry. We respect your privacy and will never sell your information.</p>
+          <button type="submit" class="form-submit">Submit Request →</button>
+        </form>
+        <div class="success-msg" id="employer-success">
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24" style="margin:0 auto 8px;display:block"><path stroke="#059669" stroke-width="1.8" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <h4>Thank you — we'll be in touch soon!</h4>
+          <p>A member of our partnerships team will reach out within 24 business hours. If you need immediate assistance, call (918) 200-9777.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="ft">
+  <div class="fti">
+    <div class="ftb">
+      <img class="ftlogo" src="images/logo-white.png" alt="MedFit Health"/>
+      <p>Physician-led metabolic health programs for employers, brokers, associations, and individuals. Available in all 50 states.</p>
+      <div class="ft-contact">
+        <a href="tel:9182009777"><svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>(918) 200-9777</a>
+        <a href="mailto:info@medfit.health"><svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>info@medfit.health</a>
+        <a href="https://maps.google.com/?q=1209+S+Frankfort+Ave+Suite+205+Tulsa+OK+74120" target="_blank"><svg width="15" height="15" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-width="1.8" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke="currentColor" stroke-width="1.8" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>1209 S. Frankfort Ave, Suite 205<br>Tulsa, OK 74120</a>
+      </div>
+      <div style="display:inline-block;margin-top:4px;width:210px;height:150px;overflow:visible">
+        <div style="transform:scale(1.5);transform-origin:top left">
+          <script src="https://static.legitscript.com/seals/9991585.js"></script>
+        </div>
+      </div>
+      <div style="font-size:11px;color:rgba(255,255,255,.3);margin-top:5px">Verified Telehealth Provider</div>
+    </div>
+    <div class="ftlinks">
+      <div class="ftcol"><h4>GLP-1 Programs</h4><ul>
+        <li><a href="tirzepatide.html">Tirzepatide</a></li>
+        <li><a href="semaglutide.html">Semaglutide</a></li>
+      </ul></div>
+      <div class="ftcol"><h4>Peptides &amp; Wellness</h4><ul>
+        <li><a href="peptides.html#cat-cellular-energy">Peptides &amp; NAD+</a></li>
+        <li><a href="peptides.html#cat-recovery">Recovery</a></li>
+        <li><a href="peptides.html#cat-anti-aging">Anti-Aging</a></li>
+      </ul></div>
+      <div class="ftcol"><h4>Legal</h4><ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms of Use</a></li>
+        <li><a href="consent.html">Medical Consent</a></li>
+        <li><a href="safety.html">Safety Information</a></li>
+        <li><a href="accessibility.html">Accessibility</a></li>
+      </ul></div>
+    </div>
+  </div>
+  <div class="ftbot"><div class="ftboti">
+    <p class="ftleg">© 2025 MedFit Health (Strategic Cost Containment LLC) · 1209 S. Frankfort Ave, Suite 205, Tulsa, OK 74120 · <a href="tel:9182009777">(918) 200-9777</a> · <a href="mailto:info@medfit.health">info@medfit.health</a> | <a href="privacy.html">Privacy</a> | <a href="terms.html">Terms</a> | <a href="consent.html">Consent</a> | <a href="safety.html">Safety</a> | <a href="accessibility.html">Accessibility</a></p>
+    <p class="ftdisc">MedFit Health connects patients with licensed telehealth providers. All prescriptions are issued by board-certified physicians following an individual physician evaluation. Medications are compounded and dispensed by licensed partner pharmacies authorized to distribute across all 50 states. Compounded drugs are not FDA-approved and have not been evaluated by the FDA for safety, effectiveness, or quality. They are not represented to be the same as, or equivalent to, any FDA-approved medication. Individual results vary and are not guaranteed. LegitScript Certified Telehealth Provider.</p>
+  </div></div>
+</footer>
+<script>
+const hdr=document.getElementById('hdr');
+if(hdr)window.addEventListener('scroll',()=>hdr.classList.toggle('sc',scrollY>20),{passive:true});
+const nt=document.getElementById('nt'),mm=document.getElementById('mm');
+if(nt){nt.addEventListener('click',()=>{const o=mm.classList.toggle('open');nt.setAttribute('aria-expanded',o);const ss=nt.querySelectorAll('span');if(o){ss[0].style.transform='rotate(45deg) translate(5px,5px)';ss[1].style.opacity='0';ss[2].style.transform='rotate(-45deg) translate(5px,-5px)'}else{ss.forEach(s=>{s.style.transform='';s.style.opacity='';})}});}
+if(mm){mm.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mm.classList.remove('open');if(nt)nt.setAttribute('aria-expanded','false');if(nt)nt.querySelectorAll('span').forEach(s=>{s.style.transform='';s.style.opacity='';});}));}
+document.querySelectorAll('.supply-toggle').forEach(tog=>{tog.querySelectorAll('.supply-btn').forEach(btn=>{btn.addEventListener('click',()=>{const card=btn.closest('[data-card]');if(!card)return;card.querySelectorAll('.supply-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');card.querySelectorAll('.supply-panel').forEach(p=>{p.style.display='none';});const panel=card.querySelector('.supply-panel[data-supply="'+btn.dataset.supply+'"]');if(panel)panel.style.display='block';});});});
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}}),{threshold:.06,rootMargin:'0px 0px -20px 0px'});
+document.querySelectorAll('.anim').forEach((el,i)=>{el.style.cssText+=`opacity:0;transform:translateY(16px);transition:opacity .45s ease ${i*.04}s,transform .45s ease ${i*.04}s`;obs.observe(el);});
+document.head.insertAdjacentHTML('beforeend','<style>.vis{opacity:1!important;transform:none!important}</style>');
+const ptForm=document.getElementById('patient-form');
+if(ptForm){ptForm.addEventListener('submit',function(e){if(window.location.hostname===''||window.location.protocol==='file:'){e.preventDefault();ptForm.style.display='none';document.getElementById('patient-success').style.display='block';}});}
+const efForm=document.getElementById('employer-form');
+if(efForm){efForm.addEventListener('submit',function(e){if(window.location.hostname===''||window.location.protocol==='file:'){e.preventDefault();efForm.style.display='none';document.getElementById('employer-success').style.display='block';}});}
+const mlToggle=document.getElementById('multi-loc-toggle');
+const mlFields=document.getElementById('multi-loc-fields');
+if(mlToggle&&mlFields){mlToggle.addEventListener('change',()=>{mlFields.classList.toggle('show',mlToggle.checked);});}
+</script>
+<script>
+/* Topbar + header pin — keeps both visible together on scroll, as one stacked unit.
+   Self-contained: only reads/writes .topbar, .hdr, and #headerSpacer, so it can't
+   conflict with any other script on the page. */
+(function initHeaderPin(){
+  var topbar = document.querySelector('.topbar');
+  var header = document.querySelector('.hdr');
+  var spacer = document.getElementById('headerSpacer');
+  if(!topbar || !header || !spacer) return;
+
+  function pin(){
+    topbar.classList.remove('header-pinned');
+    header.classList.remove('header-pinned');
+    topbar.style.top = '';
+    header.style.top = '';
+
+    var topbarHeight = topbar.offsetHeight;
+    var headerHeight = header.offsetHeight;
+
+    topbar.style.top = '0px';
+    header.style.top = topbarHeight + 'px';
+    topbar.classList.add('header-pinned');
+    header.classList.add('header-pinned');
+
+    spacer.style.height = (topbarHeight + headerHeight) + 'px';
+    spacer.classList.add('header-active');
+  }
+
+  window.addEventListener('resize', pin);
+  pin();
+})();
+</script>
+</body></html>
